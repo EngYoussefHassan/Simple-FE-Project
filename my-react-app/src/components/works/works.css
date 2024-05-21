@@ -1,0 +1,102 @@
+.works__section {
+  height: 100vh;
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.works__container {
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+}
+.works__left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.works__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.works__list__item {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.works__list__item span {
+  display: block;
+  color: transparent;
+  font-weight: bold;
+  font-size: 70px;
+  -webkit-text-stroke: 1px white;
+  transition: color 0.3s ease;
+}
+
+.works__list__item:hover span {
+  color: white;
+}
+
+.works__right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.works__gallery {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.works__gallery__imgbox {
+  width: 100px;
+  height: 500px;
+  margin: 10px;
+  border-radius: 20px;
+  background: url(earth.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: width 1s;
+}
+.works__gallery__imgbox:nth-child(2) {
+  background: url(mercury.png);
+  background-size: cover;
+  background-position: center;
+}
+.works__gallery__imgbox:nth-child(3) {
+  background: url(saturn_real.png);
+  background-size: cover;
+  background-position: center;
+}
+.works__gallery__imgbox:nth-child(4) {
+  background: url(neptune.png);
+  background-size: cover;
+  background-position: center;
+}
+.works__gallery__imgbox h3 {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  opacity: 0;
+  transition: bottom 1s, opacity 1s;
+}
+
+.works__gallery__imgbox:hover {
+  width: 400px;
+  cursor: pointer;
+}
+.works__gallery__imgbox:hover h3 {
+  opacity: 1;
+  bottom: 25px;
+}
